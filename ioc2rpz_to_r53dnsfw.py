@@ -1,12 +1,19 @@
 #(c) Vadim Pavlov
 #2023-01-12
 #lambda function to import ioc2rpz community feeds to AWS Route 53 DNS Firewall domain lists
-
+#
+#
+# This lambda functon requires the following permissions:
+# - route53resolver:ImportFirewallDomains (all objects or just the domain lists provisioned below)
+# - s3:GetObject (all object or the objects listed below)
+#
+#
 import boto3
 import os
 
 feeds = [
 #['s3 object', 'domains list id']
+
 #free tier
 ['s3://ioc2rpz-public-feeds-free/adultfree.ioc2rpz','PUT_DOMAIN_LIST_ID_HERE'],                     # large feed
 ['s3://ioc2rpz-public-feeds-free/blox-ukraine-russia-conflict.ioc2rpz','PUT_DOMAIN_LIST_ID_HERE'],
@@ -33,7 +40,7 @@ feeds = [
 
 ]
 
-#r53 = boto3.client('route53resolver')
+r53 = boto3.client('route53resolver')
 
 def lambda_handler(event, context):
 
