@@ -18,7 +18,6 @@ feeds = [
 ['s3://ioc2rpz-public-feeds-free/adultfree.ioc2rpz','PUT_DOMAIN_LIST_ID_HERE'],                     # large feed
 ['s3://ioc2rpz-public-feeds-free/blox-ukraine-russia-conflict.ioc2rpz','PUT_DOMAIN_LIST_ID_HERE'],
 ['s3://ioc2rpz-public-feeds-free/rescure-domains.ioc2rpz','PUT_DOMAIN_LIST_ID_HERE'],
-['s3://ioc2rpz-public-feeds-free/local.ioc2rpz','PUT_DOMAIN_LIST_ID_HERE'],
 
 #core tier
 #['s3://ioc2rpz-public-feeds-core/doh.ioc2rpz','PUT_DOMAIN_LIST_ID_HERE'],
